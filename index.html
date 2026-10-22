@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check password strength and learn how to create stronger passwords.">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <div class="icon">🔐</div>
+
+    <h1>Password Strength Checker</h1>
+    <p class="subtitle">
+      Check your password and learn how to make it stronger.
+    </p>
+
+    <label for="password">Enter a password</label>
+
+    <div class="password-box">
+      <input
+        type="password"
+        id="password"
+        placeholder="Type a password..."
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button type="button" id="togglePassword">
+        Show
+      </button>
+    </div>
+
+    <div class="strength-header">
+      <span>Password strength</span>
+      <span id="strengthText">Not checked</span>
+    </div>
+
+    <div
+      class="meter"
+      role="progressbar"
+      aria-label="Password strength"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+      id="meter"
+    >
+      <div id="meterFill"></div>
+    </div>
+
+    <h2>Password requirements</h2>
+
+    <ul class="requirements">
+      <li id="length">✗ At least 12 characters</li>
+      <li id="lowercase">✗ A lowercase letter (a-z)</li>
+      <li id="uppercase">✗ An uppercase letter (A-Z)</li>
+      <li id="number">✗ A number (0-9)</li>
+      <li id="symbol">✗ A special character</li>
+    </ul>
+
+    <div class="feedback" id="feedback" aria-live="polite">
+      Enter a password to begin.
+    </div>
+
+    <p class="privacy">
+      🔒 Your password is checked in your browser and is not
+      sent to a server or saved by this page.
+    </p>
+  </main>
+</body>
+</html>
